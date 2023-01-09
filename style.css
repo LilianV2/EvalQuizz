@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +8,21 @@
 
 html {
     font-size: 62.5%;
+    color: #ffffff;
+    font-family: Rowdies, sans-serif;
+    letter-spacing: 1px;
 }
 
 body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: linear-gradient(180deg, rgb(201, 89, 26) 8%, rgb(110, 47, 0) 21%, rgb(30, 12, 0) 87%);
 }
 
 #container {
-    width: 98vw;
-    height: 98vh;
-    border: 1px solid blue;
+    width: 90vw;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -25,37 +30,120 @@ body {
 }
 
 #image {
-    width: 90%;
+    width: 100%;
     height: 50%;
-    border: 1px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 img {
-    min-height: 60%;
-    min-width: 40%;
+    height: 80%;
+    width: 40%;
 }
 
-#line {
+.line {
     width: 80%;
-    height: 1px;
-    border: 1px solid grey;
+    border: 1px solid rgba(255, 173, 0, 0.23);
 }
 
 #answer {
     display: flex;
-    flex-wrap: wrap;
     font-size: 1.8rem;
-    width: 50%;
-    border: 1px solid green;
+    width: 100%;
     height: 20%;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 
-#answer .hover:hover {
-    background-color: #dadada;
+p {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+#displayAll {
+    font-size: 2rem;
+    display: none;
+}
+
+#finalResult {
+    font-size: 4rem;
+    font-weight: bold;
+    display: none;
+}
+
+#total {
+    display: none;
+}
+
+#next {
+    width: 9%;
+    height: 4%;
+    background: #233415;
+    color: white;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+#next:hover {
+    background: #245932;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+#total {
+    width: 13%;
+    height: 8%;
+    background: #00388f;
+    color: white;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#total:hover {
+    background: #001d3b;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+@media screen and (max-width: 1200px){
+    img {
+        height: 70%;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    img {
+        height: 65%;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    img {
+        height: 50%;
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    img {
+        height: 45%;
+        width: 75%;
+    }
+
+    p {
+        text-align: center;
+    }
 }
